@@ -1,1 +1,32 @@
 @import '~bootstrap/scss/bootstrap';
+body {
+  
+}
+
+#sign-in {
+  display: flex;
+}
+
+button {
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.row {
+  width: 400px;
+}
+
+.box {
+  background-color: gray;
+  border: 1px solid white;
+  display: flex;
+  height: 100px;
+}
+
+.success {
+  color: green;
+}
+
+.failure {
+  color: red;
+}
