@@ -1,44 +1,55 @@
-const config = require('./../config.js')
+const config = require('./../config')
 const store = require('../store')
 
-const index = function () {
-  console.log('in index');
+const getGame = function () {
   // make GET request to /games
+  console.log('get game')
   return $.ajax({
     url: 'https://tic-tac-toe-wdi.herokuapp.com/games',
     method: 'GET'
   })
 }
 
-const create = function (formData) {
+const createGame = function (data) {
+  console.log('new game created')
   return $.ajax({
     method: 'POST',
     url: config.apiUrl + '/games/',
     headers: {
         Authorization: 'Token token=' + store.user.token
     },
-    data: formData
+    data: '{}'
   })
 }
 
-const show = function (formData) {
+const updateGame = function (data) {
+console.log('game updated')
   return $.ajax({
-    url: config.apiUrl + '/games/' + formData.game.id,
+    url: config.apiUrl + '/games/' + data.game.id,
+    method: 'PATCH', //--> to update
+    data: {"game": {
+    "cell": {
+      "index": 0,
+      "value": "X"
+    },
+    "over": false
+  }
+}
+  })
+}
+
+const showGame = function (data) {
+  console.log('game shown')
+  return $.ajax({
+    url: config.apiUrl + '/games/' + data.game.id,
     method: 'GET'
   })
 }
 
-const update = function (formData) {
-  return $.ajax({
-    url: config.apiUrl + '/games/' + formData.game.id,
-    method: 'PATCH', //--> to update
-    data: formData
-  })
-}
 
 module.exports = {
-  index,
-  create,
-  show,
-  update
+  getGame,
+  createGame,
+  updateGame,
+  showGame
 }

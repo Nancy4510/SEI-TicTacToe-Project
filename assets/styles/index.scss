@@ -1,6 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
 body {
-  
+
 }
 
 #sign-in {
@@ -9,18 +9,30 @@ body {
 
 button {
   border-radius: 10px;
+  //display: flex;
+  //flex-direction: row;
   margin-top: 15px;
 }
 
+#gameMessage {
+  color: green;
+  text-align: center;
+}
+
 .row {
+  margin: auto;
   width: 400px;
 }
 
 .box {
+  align-items: center;
   background-color: gray;
   border: 1px solid white;
+  cursor: pointer;
   display: flex;
+  font-size: 20px;
   height: 100px;
+  justify-content: center;
 }
 
 .success {

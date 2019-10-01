@@ -15,17 +15,44 @@ const failureMessage = function (newText) {
   $('#message').addClass('failure')
 }
 
-const onCreateGameSuccess = function () {
-  successMessage('Created example successfully!')
+const onGetGameSuccess = function (response) {
+  console.log(response)
+  successMessage('Get games successfully!')
 }
 
-const onCreateGameFailure = function () {
-  failureMessage('Creating example failed')
+const onGetGameFailure = function (response) {
+  console.log(response)
+  successMessage('Get games failed!')
 }
 
- 
+const onCreateGameSuccess = function (data) {
+  store.game = data.game
+  console.log(store)
+  successMessage('Created game successfully!')
+}
+
+const onCreateGameFailure = function (data) {
+  store.game = data.game
+  console.log(store)
+  failureMessage('Created game failed')
+}
+
+const onUpdateGameSuccess = function (responseData) {
+  store.game = responseData.game
+  console.log(store)
+  successMessage('Updated game successfully!')
+}
+
+const onUpdateGameFailure = function (responsData) {
+  store.game = responseData.game
+  failureMessage('Update game failed')
+}
 
 module.exports = {
+  onGetGameSuccess,
+  onGetGameFailure,
   onCreateGameSuccess,
-  onCreateGameFailure
+  onCreateGameFailure,
+  onUpdateGameSuccess,
+  onUpdateGameFailure
 }

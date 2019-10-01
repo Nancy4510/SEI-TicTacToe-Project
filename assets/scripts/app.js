@@ -14,7 +14,9 @@ $(() => {
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('submit', authEvents.onSignOut)
-  $('#btncreateGame').on('click', gamesEvents.onCreateGame)
+  $('#create-game').on('submit', gamesEvents.onCreateGame)
+  $('#get-games').on('submit', gamesEvents.onGetGame)
+  $('.box').on('click', gamesEvents.onClick)
 
   $('#btnSignIn').on('click', function (event) {
     $('main').show()
@@ -34,7 +36,8 @@ $(() => {
   $('.signOut').hide()
   //$('main').hide()
 
-   $('#btnClear').on('click', function (event){
+   $('#btnNewGame').on('click', function (event){
       $('.box').empty()
+      $('#gameMessage').hide()
     })
 })
