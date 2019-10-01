@@ -77,12 +77,15 @@ button {
 }
 
 #gameMessage {
-  color: $message-color;
+  color: white;
+  font-size: 25px;
+  margin-top: 20px;
   text-align: center;
 }
 
 .row {
   margin: auto;
+  margin-top: 20px;
   width: 400px;
 }
 
