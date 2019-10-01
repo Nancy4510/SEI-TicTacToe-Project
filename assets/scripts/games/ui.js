@@ -15,12 +15,12 @@ const failureMessage = function (newText) {
   $('#message').addClass('failure')
 }
 
-const onGetGameSuccess = function (response) {
+const onGetGameSuccess = function () {
   console.log(response)
   successMessage('Get games successfully!')
 }
 
-const onGetGameFailure = function (response) {
+const onGetGameFailure = function () {
   console.log(response)
   successMessage('Get games failed!')
 }

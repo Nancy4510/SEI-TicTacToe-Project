@@ -1,21 +1,83 @@
 @import '~bootstrap/scss/bootstrap';
-body {
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+$bg-color: #ffffff;
+$message-color: green;
 
+body {
+  background-color: #8ac06b;
+  font-family: 'Roboto Slab', serif;
+}
+
+#message {
+  text-align: center;
+}
+
+#container {
+  margin: auto;
+  margin-top: 40px;
+  width: 500px;
+}
+
+.signIn {
+  background-color: $bg-color;
+  box-shadow: 5px 10px 8px 10px gray;
+  height: 300px;
+  margin-top: 50px;
 }
 
 #sign-in {
+  margin-top: 20px;
+  //padding-top: 20px;
+}
+
+.signUp {
+  background-color: $bg-color;
+  //A background shadow that is applied in different sizes to the top, left,
+  //bottom and right
+  box-shadow: 5px 10px 8px 10px gray;
+  height: 380px;
+}
+
+#sign-up {
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+#changePassword {
+  display:inline-block;
+}
+
+input {
+  background-color: #f2f2f2;
   display: flex;
+  padding: 5px;
+  margin: auto;
+  width: 45%;
+
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  padding-top: 30px;
+  text-align: center;
 }
 
 button {
-  border-radius: 10px;
-  //display: flex;
-  //flex-direction: row;
-  margin-top: 15px;
+  background-color: #4caf50;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  margin-top: 10px;
+  margin: auto;
+  text-transform: uppercase;
+  width: 45%;
 }
 
 #gameMessage {
-  color: green;
+  color: $message-color;
   text-align: center;
 }
 
@@ -35,10 +97,17 @@ button {
   justify-content: center;
 }
 
+footer {
+  font-size: 20px;
+  text-align: center;
+}
+
 .success {
-  color: green;
+  color: white;
+  font-size: 25px;
 }
 
 .failure {
   color: red;
+  font-size: 25px;
 }

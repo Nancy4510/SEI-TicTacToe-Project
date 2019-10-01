@@ -14,14 +14,16 @@
 </head>
 
 <body>
-  <h1>Welcome to Tic Tac Toe</h1>
+<div id="container">
   <p id="message"></p>
+  <h1 id="title">Welcome to Tic Tac Toe</h1>
   <div class='signIn'>
-    <h2>Sign In:</h2>
+    <h2>Sign-In</h2>
     <form id="sign-in">
-      <input placeholder="Enter email" type="email" name="credentials[email]">
+      <input placeholder="Enter Email" type="email" name="credentials[email]">
       <br>
-      <input placeholder="Enter password" type="password" name="credentials[password]">
+      <input placeholder="Enter Password" type="password" name="credentials[password]">
+      <br>
       <button id='btnSignIn'>Sign In</button>
     </form>
   </div>
@@ -31,33 +33,13 @@
   <div class='signUp'>
   <h2>Sign-Up</h2>
   <form id="sign-up">
-    Email: <input placeholder="Enter email" type="email" name="credentials[email]">
+    <input placeholder="Enter Email" type="email" name="credentials[email]">
     <br>
-    Password: <input placeholder="Enter password" type="password" name="credentials[password]">
+    <input placeholder="Enter Password" type="password" name="credentials[password]">
     <br>
-    Confirm Password: <input placeholder="Confirm password" type="password" name="credentials[password_confirmation]">
+    <input placeholder="Confirm Password" type="password" name="credentials[password_confirmation]">
     <br>
     <button>Sign Up</button>
-  </form>
-</div>
-
-  <div class='changePassword'>
-  <h2>Change Password</h2>
-  <form id="change-password">
-    Old Password: <input placeholder="Enter old password" type="password" name="passwords[old]">
-    <br>
-    New Password: <input placeholder="Enter new password" type="password" name="passwords[new]">
-    <br>
-    <button>Change Password</button>
-   </form>
-  </div>
-
-<br>
-
- <div class='signOut'>
-  <h2>Sign Out</h2>
-  <form id="sign-out">
-    <button id='btnSignOut'>Sign Out</button>
   </form>
 </div>
 
@@ -68,12 +50,10 @@
   <h2>Instructions</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   <form id="create-game">
-    <button id='btnNewGame'>New Game</button>
+    <button id="btnNewGame">New Game</button>
   </form>
-  <form id ='get-games'>
-    <button>Get Games</button>
-  </form>
-  <!-- <button id='btnClear'>Clear</button> -->
+  <br>
+  <button id ="get-games">Get Games</button>
   <p id = 'gameMessage'></p>
   <div class="row">
     <div id='square1' class="col-4 box"></div>
@@ -86,9 +66,28 @@
     <div id='square8' class="col-4 box"></div>
     <div id='square9' class="col-4 box"></div>
   </div>
+
+  <div class='changePassword'>
+  <h2>Change Password</h2>
+  <form id="change-password">
+    <input placeholder="Enter Old Password" type="password" name="passwords[old]">
+    <br>
+    <input placeholder="Enter New Password" type="password" name="passwords[new]">
+    <br>
+    <button>Change Password</button>
+   </form>
+  </div>
+  <br>
+  <div class='signOut'>
+    <form id="sign-out">
+      <button id='btnSignOut'>Sign Out</button>
+    </form>
+  </div>
+  
 </main>
 <footer>
   &copy 2019
 </footer>
+</div>
 </body>
 </html>

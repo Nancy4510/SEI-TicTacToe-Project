@@ -3,12 +3,12 @@ const getformFields = require('../../../lib/get-form-fields.js')
 const api = require('./api')
 const ui = require('./ui')
 
-const onGetGames = function (data) {
+const onGetGames = function () {
   console.log("In onGetGames")
   event.preventDefault()
-  api.getGame(data)
+  api.getGame()
     .then(ui.onGetGameSuccess)
-    .catch(ui.onError)
+    .catch(ui.onGetGameFailure)
 }
 
 const onCreateGame = function (data) {

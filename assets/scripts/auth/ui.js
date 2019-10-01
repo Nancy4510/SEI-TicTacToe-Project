@@ -24,17 +24,17 @@ const onSignUpFailure = function () {
 }
 
 const onSignInSuccess = function (responseData) {
-  successMessage('Signed in successfully!')
+  successMessage('Signed in Successfully!')
   store.user=responseData.user
   $('.signIn').hide()
 }
 
 const onSignInFailure = function () {
-  failureMessage('sign in failed')
+  failureMessage('Sign In failed')
 }
 
 const onChangePasswordSuccess = function () {
-  successMessage('Changed password successfully!')
+  successMessage('changed password successfully!')
   $('.changePassword').hide()
 }
 
@@ -44,8 +44,9 @@ const onChangePasswordFailure = function () {
 }
 
 const onSignOutSuccess = function () {
-  successMessage('Signed Out successfully!')
+  successMessage('Signed Out Successfully!')
   $('.signOut').hide()
+  $('form').trigger('reset')
 }
 
 const onSignOutFailure = function () {
