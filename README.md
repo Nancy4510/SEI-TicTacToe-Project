@@ -12,8 +12,7 @@ The user should be able to switch turns between X and O on a game board and the 
 - As a user I want to be able to sign in and sign up successfully.
 - A a user I want to be able to change the password and sign out successfully.
 - As a user I want to be able to create a new game and play it.
-- As a user I want to be able to see whether I won, lost or if there was a tie.
-- As a user I want to be able to see all the games played and the number of games won by the user.
+- As a user I want to be able to see all the number of games played.
 
 
 ## **Technologies Used**
@@ -26,3 +25,5 @@ The user should be able to switch turns between X and O on a game board and the 
 ## **Unsolved Problems**
 - I still need to be able to determine a tie.
 - I still need to display the number of games won by the user.
+
+## **Wireframes**

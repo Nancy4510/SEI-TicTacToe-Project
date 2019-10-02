@@ -27,6 +27,7 @@ const onSignInSuccess = function (responseData) {
   successMessage('Signed in Successfully!')
   store.user=responseData.user
   $('.signIn').hide()
+  $('form').trigger('reset')
 }
 
 const onSignInFailure = function () {

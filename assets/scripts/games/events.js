@@ -39,16 +39,19 @@ $('.box').on('click', function (event)
   {
     $(event.target).text(player)
     player = 'O'
+    $( "#gameMessage" ).append( "<p>It's O's turn to move now!</p>")
+    
   }
   else if(player === 'O')
   {
     $(event.target).text(player)
     player = 'X'
+    $( "#gameMessage" ).append( "<p>It's X's turn to move now!</p>")
   }
 }
 else
 {
-  $( "#gameMessage" ).append( "<p>This square is already occupied! Please choose another one.</p>")
+  $("#gameMessage" ).append( "<p>This square is already occupied! Please choose another one.</p>")
 }
 ///////////CHECKING TO SEE IF PLAYER X WON///////////////////
 //checking to see if the squares are equal to determine a win
@@ -110,6 +113,10 @@ else if ($('#square7').html() === 'O' && $('#square8').html() === 'O' && $('#squ
 }else if ($('#square3').html() === 'O' && $('#square5').html() === 'O' && $('#square7').html() === 'O'){
   $( "#gameMessage" ).append("<p>Player O Won! Congrats!</p>")
   $('.box').off('click')
+  
+// }else if (){
+//   $( "#gameMessage" ).append("<p>It's a tie!</p>")
+// }
 }
 })
 

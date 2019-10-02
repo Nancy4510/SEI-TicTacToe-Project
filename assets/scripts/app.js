@@ -24,6 +24,7 @@ $(() => {
     $('.signOut').show()
     $('.signUp').hide()
     $('#title').hide()
+    $('.signIn').hide()
   })
 
   $('#btnSignOut').on('click', function (event) {
