@@ -24,6 +24,10 @@ The user should be able to switch turns between X and O on a game board and the 
 
 ## **Unsolved Problems**
 - I still need to be able to determine a tie.
-- I still need to display the number of games won by the user.
 
-## **Wireframes**
+## **Future**
+
+Although I was able to complete the project, I do want to continue working on it and making it better. I would certianly like to have both the sign-up and sign-in box to be next to eachother than having them vertical. I would also like to have the change password section to be on top of the page, as well as the sign-out button. I do want to make the code more cleaner where I don't repeat myself over and over again.   
+
+## **Wireframe**
+![Wireframe](/wireframe.jpeg)
