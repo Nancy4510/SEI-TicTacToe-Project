@@ -5,9 +5,12 @@ const store = require('../store')
 
 const getGame = function () {
   // make GET request to /games
-  console.log('get game')
+  console.log('in getGame')
   return $.ajax({
-    url: 'https://tic-tac-toe-wdi.herokuapp.com/games',
+    url: config.apiUrl + '/games/',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
     method: 'GET'
   })
 }
@@ -18,25 +21,18 @@ const createGame = function (data) {
     method: 'POST',
     url: config.apiUrl + '/games/',
     headers: {
-        Authorization: 'Token token=' + store.user.token
+      Authorization: 'Token token=' + store.user.token
     },
     data: '{}'
   })
 }
 
 const updateGame = function (data) {
-console.log('game updated')
+  console.log('game updated')
   return $.ajax({
     url: config.apiUrl + '/games/' + data.game.id,
-    method: 'PATCH', //--> to update
-    data: {"game": {
-    "cell": {
-      "index": 0,
-      "value": "X"
-    },
-    "over": false
-  }
-}
+    method: 'PATCH', // --> to update
+    data: data
   })
 }
 
@@ -47,7 +43,6 @@ const showGame = function (data) {
     method: 'GET'
   })
 }
-
 
 module.exports = {
   getGame,

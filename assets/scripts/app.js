@@ -15,7 +15,7 @@ $(() => {
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('submit', authEvents.onSignOut)
   $('#create-game').on('submit', gamesEvents.onCreateGame)
-  $('#get-games').on('click', gamesEvents.onGetGame)
+  $('#get-games').on('click', gamesEvents.onGetGames)
   $('.box').on('click', gamesEvents.onClick)
 
   $('#btnSignIn').on('click', function (event) {
@@ -25,6 +25,7 @@ $(() => {
     $('.signUp').hide()
     $('#title').hide()
     $('.signIn').hide()
+    $('.row').hide()
   })
 
   $('#btnSignOut').on('click', function (event) {
@@ -39,13 +40,9 @@ $(() => {
   $('.signOut').hide()
   $('main').hide()
 
-   $('#btnNewGame').on('click', function (event){
-      $('.box').empty()
-      $('#gameMessage').hide()
-    })
-
-    $('#get-games').on('click', function (event){
-      $('#gamesWonMessage').toggle()
-    })
-
+  $('#btnNewGame').on('click', function (event) {
+    $('.box').empty()
+    $('.row').show()
+    $('#gameMessage').show()
+  })
 })

@@ -53,18 +53,19 @@
     <button id="btnNewGame">New Game</button>
   </form>
   <br>
-  <button id ="get-games">Get Games</button>
-  <p id = 'gameMessage'></p>
+  <button id ="get-games" type="button" name="button">Get Games</button>
+
+  <p id ='gameMessage'></p>
   <div class="row">
-    <div id='square1' class="col-4 box"></div>
-    <div id='square2' class="col-4 box"></div>
-    <div id='square3' class="col-4 box"></div>
-    <div id='square4' class="col-4 box"></div>
-    <div id='square5' class="col-4 box"></div>
-    <div id='square6' class="col-4 box"></div>
-    <div id='square7' class="col-4 box"></div>
-    <div id='square8' class="col-4 box"></div>
-    <div id='square9' class="col-4 box"></div>
+    <div data-square-index='0' id='square1' class="col-4 box"></div>
+    <div data-square-index='1' id='square2' class="col-4 box"></div>
+    <div data-square-index='2' id='square3' class="col-4 box"></div>
+    <div data-square-index='3' id='square4' class="col-4 box"></div>
+    <div data-square-index='4' id='square5' class="col-4 box"></div>
+    <div data-square-index='5' id='square6' class="col-4 box"></div>
+    <div data-square-index='6' id='square7' class="col-4 box"></div>
+    <div data-square-index='7' id='square8' class="col-4 box"></div>
+    <div data-square-index='8' id='square9' class="col-4 box"></div>
   </div>
 
   <div class='changePassword'>
@@ -83,10 +84,10 @@
       <button id='btnSignOut'>Sign Out</button>
     </form>
   </div>
-  
+
 </main>
 <footer>
-  &copy 2019
+  &copy; 2019
 </footer>
 </div>
 </body>

@@ -15,13 +15,15 @@ const failureMessage = function (newText) {
   $('#message').addClass('failure')
 }
 
-const onGetGameSuccess = function () {
-  console.log(response)
-  successMessage('Get games successfully!')
+const onGetGameSuccess = function (data) {
+  // console.log('In onGetGameSuccess')
+  console.log(data.games.length)
+  successMessage('Get games success')
+  $('#gameMessage').html("You've played " + data.games.length + " games! Wow!")
 }
 
 const onGetGameFailure = function () {
-  console.log(response)
+  console.log('In onGetGameFailure')
   successMessage('Get games failed!')
 }
 
@@ -43,7 +45,7 @@ const onUpdateGameSuccess = function (responseData) {
   successMessage('Updated game successfully!')
 }
 
-const onUpdateGameFailure = function (responsData) {
+const onUpdateGameFailure = function (responseData) {
   store.game = responseData.game
   failureMessage('Update game failed')
 }

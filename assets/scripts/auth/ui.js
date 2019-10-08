@@ -25,7 +25,7 @@ const onSignUpFailure = function () {
 
 const onSignInSuccess = function (responseData) {
   successMessage('Signed in Successfully!')
-  store.user=responseData.user
+  store.user = responseData.user
   $('.signIn').hide()
   $('form').trigger('reset')
 }
@@ -41,7 +41,6 @@ const onChangePasswordSuccess = function () {
 
 const onChangePasswordFailure = function () {
   failureMessage('change password failed')
-
 }
 
 const onSignOutSuccess = function () {
@@ -52,14 +51,13 @@ const onSignOutSuccess = function () {
 
 const onSignOutFailure = function () {
   failureMessage('Sign Out failed')
-
 }
 
 module.exports = {
   onSignUpSuccess,
   onSignUpFailure,
   onSignInSuccess,
-  onSignUpFailure,
+  onSignInFailure,
   onChangePasswordSuccess,
   onChangePasswordFailure,
   onSignOutSuccess,
