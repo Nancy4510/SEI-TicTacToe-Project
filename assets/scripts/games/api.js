@@ -5,7 +5,7 @@ const store = require('../store')
 
 const getGame = function () {
   // make GET request to /games
-  console.log('in getGame')
+  // console.log('in getGame')
   return $.ajax({
     url: config.apiUrl + '/games/',
     headers: {
@@ -16,7 +16,7 @@ const getGame = function () {
 }
 
 const createGame = function (data) {
-  console.log('new game created')
+  // console.log('new game created')
   return $.ajax({
     method: 'POST',
     url: config.apiUrl + '/games/',
@@ -28,7 +28,7 @@ const createGame = function (data) {
 }
 
 const updateGame = function (data) {
-  console.log('game updated')
+  // console.log('game updated')
   return $.ajax({
     url: config.apiUrl + '/games/' + data.game.id,
     method: 'PATCH', // --> to update
@@ -37,7 +37,7 @@ const updateGame = function (data) {
 }
 
 const showGame = function (data) {
-  console.log('game shown')
+  // console.log('game shown')
   return $.ajax({
     url: config.apiUrl + '/games/' + data.game.id,
     method: 'GET'

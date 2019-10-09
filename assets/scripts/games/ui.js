@@ -17,31 +17,31 @@ const failureMessage = function (newText) {
 
 const onGetGameSuccess = function (data) {
   // console.log('In onGetGameSuccess')
-  console.log(data.games.length)
+  // console.log(data.games.length)
   successMessage('Get games success')
   $('#gameMessage').html("You've played " + data.games.length + " games! Wow!")
 }
 
 const onGetGameFailure = function () {
-  console.log('In onGetGameFailure')
+  // console.log('In onGetGameFailure')
   successMessage('Get games failed!')
 }
 
 const onCreateGameSuccess = function (data) {
   store.game = data.game
-  console.log(store)
+  // console.log(store)
   successMessage('Created game successfully!')
 }
 
 const onCreateGameFailure = function (data) {
   store.game = data.game
-  console.log(store)
+  // console.log(store)
   failureMessage('Created game failed')
 }
 
 const onUpdateGameSuccess = function (responseData) {
   store.game = responseData.game
-  console.log(store)
+  // console.log(store)
   successMessage('Updated game successfully!')
 }
 

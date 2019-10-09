@@ -18,6 +18,10 @@ $(() => {
   $('#get-games').on('click', gamesEvents.onGetGames)
   $('.box').on('click', gamesEvents.onClick)
 
+  $('.changePassword').hide()
+  $('.signOut').hide()
+  $('main').hide()
+
   $('#btnSignIn').on('click', function (event) {
     $('main').show()
     $('.changePassword').show()
@@ -36,13 +40,13 @@ $(() => {
     $('#title').show()
   })
 
-  $('.changePassword').hide()
-  $('.signOut').hide()
-  $('main').hide()
+  $('#btnChangePassword').on('click', function (event) {
+    $('.changePassword').show()
 
-  $('#btnNewGame').on('click', function (event) {
-    $('.box').empty()
-    $('.row').show()
-    $('#gameMessage').show()
+    $('#btnNewGame').on('click', function (event) {
+      $('.box').empty()
+      $('.row').show()
+      $('#gameMessage').show()
+    })
   })
 })

@@ -5,7 +5,7 @@ const ui = require('./ui')
 const store = require('../store')
 
 const onGetGames = function () {
-  console.log('In onGetGames')
+  // console.log('In onGetGames')
   event.preventDefault()
   api.getGame()
     .then(ui.onGetGameSuccess)
@@ -20,7 +20,7 @@ const onCreateGame = function (data) {
 }
 
 const onUpdateGame = function (responseData) {
-  console.log('In onUpdateGame')
+  // console.log('In onUpdateGame')
   event.preventDefault()
   api.updateGame(responseData)
     .then(ui.onUpdateGameSuccess)
