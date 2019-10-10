@@ -41,12 +41,12 @@ $(() => {
   })
 
   $('#btnChangePassword').on('click', function (event) {
-    $('.changePassword').show()
+    $('#change-password').show()
+  })
 
-    $('#btnNewGame').on('click', function (event) {
-      $('.box').empty()
-      $('.row').show()
-      $('#gameMessage').show()
-    })
+  $('#btnNewGame').on('click', function (event) {
+    $('.box').empty()
+    $('.row').show()
+    $('#gameMessage').show()
   })
 })

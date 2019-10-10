@@ -19,7 +19,7 @@ const onGetGameSuccess = function (data) {
   // console.log('In onGetGameSuccess')
   // console.log(data.games.length)
   successMessage('Get games success')
-  $('#gameMessage').html("You've played " + data.games.length + " games! Wow!")
+  $('#gameMessage').html('You\'ve played a total of ' + data.games.length + ' games! Wow!')
 }
 
 const onGetGameFailure = function () {

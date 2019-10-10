@@ -16,7 +16,8 @@ const failureMessage = function (newText) {
 
 const onSignUpSuccess = function () {
   successMessage('You signed up successfully! Now you can sign in to play!')
-  $('.signUp').hide()
+  $('.signUp').show()
+  $('form').trigger('reset')
 }
 
 const onSignUpFailure = function () {
@@ -31,7 +32,7 @@ const onSignInSuccess = function (responseData) {
 }
 
 const onSignInFailure = function () {
-  failureMessage('Sign In failed')
+  failureMessage('Please sign up first to be able to play')
 }
 
 const onChangePasswordSuccess = function () {
